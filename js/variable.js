@@ -109,13 +109,13 @@ console.log(brand_result);
 // console.log(!(0));
 
 //the 1st task
-let balance = 10000;
-const payment = 2000;
-let paymentMessage;
+// let balance = 10000;
+// const payment = 2000;
+// let paymentMessage;
 
-console.log(
-  `Общая стоимость заказа ${payment} кредитов. Проверяем кол-во доступных средств на счету`
-);
+// console.log(
+//   `Общая стоимость заказа ${payment} кредитов. Проверяем кол-во доступных средств на счету`
+// );
 
 // if (balance > payment) {
 //   balance = balance - payment;
@@ -130,7 +130,7 @@ console.log(
 
 //the 2nd task
 
-const totalSpent = 1000;
+const totalSpent = 2000;
 let payment = 500;
 let discount = 0;
 let price;
