@@ -219,7 +219,7 @@ console.log(argsSum(1, 2, 3, 4));
  *   для которых есть аналог в оригинальном массиве.
  */
 
-//const numbers = [51, 18, 13, 24, 7, 85, 19, 1];
+// const numbers = [51, 18, 13, 24, 7, 85, 19, 1];
 
 const filterNumbers = function (array, ...args) {
     const newArray = []
