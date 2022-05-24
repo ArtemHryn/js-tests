@@ -1,4 +1,4 @@
-body{
+/* body{
     margin: 0;
 }
 
@@ -28,4 +28,29 @@ div {
     line-height: 1.4;
     height: auto;
     padding-top: 15px;
+} */
+
+body {
+  font-family: sans-serif;
+}
+
+span {
+  font-size: 26px;
+}
+button {
+  margin: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}
+
+.counter > p {
+  margin: 0;
+  font-size: 48px;
+  font-family: monospace;
 }
