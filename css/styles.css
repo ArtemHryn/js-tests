@@ -30,19 +30,14 @@ div {
     padding-top: 15px;
 } */
 
-body {
+/* body {
   font-family: sans-serif;
 }
 
 span {
   font-size: 26px;
 }
-button {
-  margin: 10px;
-  font-size: 16px;
-  font-family: inherit;
-  cursor: pointer;
-}
+
 
 .counter {
   display: flex;
@@ -53,4 +48,74 @@ button {
   margin: 0;
   font-size: 48px;
   font-family: monospace;
+} */
+
+button {
+  margin: 10px;
+  font-size: 26px;
+  font-family: inherit;
+  cursor: pointer;
 }
+
+.swiper {
+  margin-top: 100px;
+  width: 600px;
+  height: 300px;
+}
+
+.red {
+  background-color: red;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+li > a {
+  font-size: 24px;
+}
+
+.site-nav__link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  text-decoration: underline;
+}
+
+.site-nav__link--current {
+  color: tomato;
+}
+
+.color-picker__option {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.transaction-table {
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.title__link {
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+.additional-class {
+  background-color: red;
+}
+
