@@ -17,7 +17,6 @@ CounterPlag.prototype._getRefs = function (selector) {
   refs.incrementBtn = refs.container.querySelector("[data-increase]");
   refs.decrementBtn = refs.container.querySelector("[data-decrease]");
   refs.value = refs.container.querySelector("[data-value]");
-
   return refs;
 };
 
@@ -54,3 +53,7 @@ new CounterPlag({ selector: "#counter-1", step: 5 });
 new CounterPlag({ selector: "#counter-2", step: 10, value: 20 });
 
 new CounterPlag({ selector: "#counter-3", step: 11 });
+
+const objA = { a: 1, b: 2 }
+console.log(objA);
+console.log(Object.keys(objA));

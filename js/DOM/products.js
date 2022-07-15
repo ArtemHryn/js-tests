@@ -34,5 +34,6 @@ const makeProductCard = ({ name, description, price }) => {
 };
 
 const elements = exportedArray.map(makeProductCard);
+console.log(elements)
 
-document.querySelector(".js-products").append(...elements);
+// document.querySelector(".js-products").append(...elements);

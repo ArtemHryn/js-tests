@@ -76,7 +76,7 @@ const salaryManagerFactory = function (employeeName, baseSalary = 0) {
 
   const raise = function (amount) {
     if (amount > 1000) {
-      return "Ты офигел?";
+      return "Норм так ти";
     }
 
     salary += amount;

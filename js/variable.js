@@ -1,11 +1,11 @@
-const age = 28;
-const float_number = 125.87;
-const firstName = "Artem";
-const message = "Very and very long message";
-const isFree = false;
+// const age = 28;
+// const float_number = 125.87;
+// const firstName = "Artem";
+// const message = "Very and very long message";
+// const isFree = false;
 
-const myDescr = `Hello, I am ${firstName}, I am ${age} and wanted to say ${message}`;
-console.log(myDescr);
+// const myDescr = `Hello, I am ${firstName}, I am ${age} and wanted to say ${message}`;
+// console.log(myDescr);
 
 // let varType = typeof age;
 // console.log(varType);
@@ -76,10 +76,10 @@ console.log(myDescr);
 // const messageT = 'Some text to calculate the number of symbols';
 // console.log(messageT.length);
 
-const brand = "sAmsuNG";
+// const brand = "sAmsuNG";
 
-const brand_result = brand[0].toUpperCase() + brand.slice(1).toLowerCase();
-console.log(brand_result);
+// const brand_result = brand[0].toUpperCase() + brand.slice(1).toLowerCase();
+// console.log(brand_result);
 
 // const string1 = "Привет, я принц Абдул, это не спам, предлагаю тебе миллион!";
 // const string2 = "Самая большая РАСПРОДАЖА этой недели, не пропустите!";
@@ -127,23 +127,103 @@ console.log(brand_result);
 // console.log(paymentMessage);
 // console.log("Операция завершена");
 
-
 //the 2nd task
 
-const totalSpent = 2000;
-let payment = 500;
-let discount = 0;
-let price;
+// const totalSpent = 2000;
+// let payment = 500;
+// let discount = 0;
+// let price;
 
-if (totalSpent >= 100 && totalSpent <= 1000) {
-  discount = 0.02;
-} else if (totalSpent > 1000 && totalSpent <= 5000) {
-  discount = 0.05;
-} else if (totalSpent > 5000) {
-  discount = 0.1;
-} else if (totalSpent < 100) {
-    discount = 0;
+// if (totalSpent >= 100 && totalSpent <= 1000) {
+//   discount = 0.02;
+// } else if (totalSpent > 1000 && totalSpent <= 5000) {
+//   discount = 0.05;
+// } else if (totalSpent > 5000) {
+//   discount = 0.1;
+// } else if (totalSpent < 100) {
+//     discount = 0;
+// }
+// price = payment - payment * discount;
+
+// console.log(`Оформляем заказ на сумму ${price} со скидкой ${discount * 100}%`);
+
+/*
+Функция formatMessage(message, maxLength) принимает строку (параметр message) и форматирует её, если длина превышает 
+значение в параметре maxLength.
+
+Дополни код функции так, что если длина строки:
+
+не превышает maxLength, функция возвращает её в исходном виде.
+больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец троеточие "...", 
+после чего возвращает укороченную версию.
+ */
+
+/*
+
+За допомогою методу prompt() отримайте спочатку ім'я користувача,
+// потім рік народження і збережіть у 2 змінні. Обчисліть вік користувача та виведіть
+// його в абзаці за допомогою alert() у такому форматі "Антон: 24".
+// Визначте залишок від розподілу кількості років на 10. Залежно від цього виведіть в абзаці
+// "Антон: 21 рік" або "Антон: 24 роки" або "Антон: 25 років".
+// Тобто. всім чисел з першого в кінці має бути "_1 рік", для чисел з 2,3,4
+// наприкінці - "_3 роки", а всіх інших - "_7 років".
+// Ви можете використовувати для цього умовні конструкції if...else або switch...case.
+
+*/
+
+// const firstName = prompt("Введіть ім'я");
+// const age = prompt("Enter your age");
+// const currentYear = 2022;
+// // alert(`${firstName}: ${currentYear - age}`);
+
+// const years = (currentYear - age) % 10;
+
+// let result;
+// switch (years) {
+//   case 1:
+//     result = "pік";
+//     break;
+//   case 4:
+//   case 2:
+//   case 3:
+//     result = "роки";
+//     break;
+//   default:
+//     result = 'років'
+// }
+
+
+
+//Напишіть програму на JavaScript, щоб знайти повторювані значення в масиві JavaScript.
+//result[4, 7]
+const arr5 = [1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6];
+
+
+
+// const repeatedNum = arr5.filter((number, index) => arr5.indexOf(number) !== index
+// )
+
+
+
+// console.log([...new Set(repeatedNum)]);
+
+function repeatedNum(arr) {
+  const newObj = {}
+  for (const num of arr) {
+    const key = Object.keys(newObj)
+    if (key.includes(String(num))) {
+      newObj[num] += 1
+      continue
+    }
+    newObj[num] = 1
+  }
+  const newArr = []
+  for (const key in newObj) {
+    if (newObj[key] > 1) {
+      newArr.push(key)
+    }
+  }
+  return newArr
 }
-price = payment - payment * discount;
 
-console.log(`Оформляем заказ на сумму ${price} со скидкой ${discount * 100}%`);
+console.log(repeatedNum(arr5));
