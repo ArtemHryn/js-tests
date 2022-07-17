@@ -27,12 +27,16 @@ function createListItemsMarkup(list) {
     return list.map((item) => `<li>${item.label}</li>`).join("");
 }
 
-refs.list.innerHTML = listItemsMarkup
+insertMarkup(listItemsMarkup);
 
 function onFilterChange(e) {
-    const filter = e.target.value
+    const filter = e.target.value.toLowerCase()
 
     const filteredItems = tech.filter(t => t.label.toLowerCase().includes(filter))
     const listItemsmarkup = createListItemsMarkup(filteredItems)
-    refs.list.innerHTML = listItemsmarkup;
+    insertMarkup(listItemsmarkup);
+}
+
+function insertMarkup(markup) {
+    refs.list.innerHTML = markup;
 }
