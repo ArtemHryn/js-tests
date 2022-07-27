@@ -1,0 +1,23 @@
+{
+  "name": "js-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtemHryn/js-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtemHryn/js-tests/issues"
+  },
+  "homepage": "https://github.com/ArtemHryn/js-tests#readme",
+  "dependencies": {
+    "joi": "^17.6.0",
+    "lodash.throttle": "^4.1.1"
+  }
+}

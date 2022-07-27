@@ -192,38 +192,59 @@
 //     result = 'років'
 // }
 
-
-
 //Напишіть програму на JavaScript, щоб знайти повторювані значення в масиві JavaScript.
 //result[4, 7]
 const arr5 = [1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6];
 
-
-
 // const repeatedNum = arr5.filter((number, index) => arr5.indexOf(number) !== index
 // )
 
-
-
 // console.log([...new Set(repeatedNum)]);
 
-function repeatedNum(arr) {
-  const newObj = {}
-  for (const num of arr) {
-    const key = Object.keys(newObj)
-    if (key.includes(String(num))) {
-      newObj[num] += 1
-      continue
-    }
-    newObj[num] = 1
-  }
-  const newArr = []
-  for (const key in newObj) {
-    if (newObj[key] > 1) {
-      newArr.push(key)
-    }
-  }
-  return newArr
+//Добавьте JavaScript к кнопке button, чтобы при нажатии элемент <div id="text"> исчезал.
+{
+  /* <button type="button" id="hide">Нажмите, чтобы спрятать текст"<button/>
+<div id="text">Текст</div> */
 }
 
-console.log(repeatedNum(arr5));
+// const refs = {
+//   hideBtn: document.querySelector('#hide'),
+//   textEl: document.querySelector('#text')
+// }
+
+// refs.hideBtn.addEventListener('click', hideText)
+
+// function hideText() {
+//   // refs.textEl.innerHTML = ''
+//   // refs.textEl.style.display = 'none'
+//   // refs.textEl.classList.add('hidden')
+//   // refs.textEl.hidden = true
+// }
+
+const refs = {
+  fieldEl: document.querySelector(".football-field"),
+  ballEl: document.querySelector(".ball"),
+};
+
+// refs.fieldEl.addEventListener("mousemove", moveBall);
+refs.fieldEl.addEventListener("mouseover", moveBall);
+// refs.fieldEl.addEventListener("mouseout", moveBall);
+console.dir(refs.ballEl.clientWidth);
+function moveBall(e) {
+  let ballPositionX = e.clientX - refs.ballEl.clientWidth / 2
+  let ballPositionY = e.clientY - refs.ballEl.clientHeight / 2
+  const halfBallWidth = refs.ballEl.clientWidth / 2
+  const halfBallHeight = refs.ballEl.clientHeight / 2
+  console.log(e);
+  // console.log("clientX: ", e.clientX, "clientY: ", e.clientY);
+  console.log(e.target.getBoundingClientRect());
+  const { bottom, right } = e.target.getBoundingClientRect();
+  if (bottom < e.clientY + halfBallHeight) {
+    ballPositionY = bottom / 2
+  }
+    if (right < e.clientX + halfBallWidth) {
+      ballPositionX = right / 2;
+    }
+  refs.ballEl.style.left = `${ballPositionX}px`;
+  refs.ballEl.style.top = `${ballPositionY}px`;
+}
